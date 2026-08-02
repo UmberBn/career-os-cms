@@ -1,8 +1,8 @@
 # CareerOS CMS
 
-CareerOS CMS é uma plataforma pessoal construída com **Strapi v5**, **PostgreSQL** e **Node.js** para atuar como fonte única de verdade da minha identidade profissional.
+CareerOS CMS é uma plataforma pessoal construída com **Strapi v5**, **PostgreSQL** e **Node.js** para atuar como a fonte única de verdade da minha identidade profissional.
 
-O projeto centraliza informações sobre minha carreira e disponibiliza esses dados através de uma API, permitindo que diferentes consumidores (como GPTs Customizados, site pessoal e geradores de currículo) utilizem a mesma base de informações.
+O projeto centraliza informações sobre minha carreira e disponibiliza esses dados através de uma API, permitindo que diferentes consumidores, como um **Custom GPT**, site pessoal e geradores de currículo, utilizem a mesma base de informações.
 
 ## Tecnologias
 
@@ -11,24 +11,55 @@ O projeto centraliza informações sobre minha carreira e disponibiliza esses da
 - Node.js
 - Docker
 
+## Pré-requisitos
+
+- Node.js
+- Docker
+- Docker Compose
+
 ## Executando o projeto
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Inicie o banco de dados:
 
 ```bash
 docker compose up -d
-npm install
+```
+
+Execute a aplicação:
+
+```bash
 npm run develop
 ```
 
-A aplicação estará disponível em:
+O painel administrativo estará disponível em:
 
-```
+```text
 http://localhost:1337/admin
 ```
 
 ## Documentação
 
-O projeto utiliza uma documentação simples para manter a implementação alinhada com o domínio do sistema.
+O projeto utiliza uma documentação simples para manter a implementação alinhada com o domínio e as decisões arquiteturais.
 
-- **DOMAIN.md** — Define a estrutura do domínio, incluindo entidades, components, relacionamentos e convenções que orientam a implementação.
+### DOMAIN.md
 
-- **DECISIONS.md** — Registra as decisões arquiteturais e os princípios que orientam o projeto. Este documento representa o estado atual da arquitetura, não um histórico de alterações.
+Define a estrutura do domínio do sistema, incluindo:
+
+- Collections
+- Components
+- Relacionamentos
+- Convenções de modelagem
+
+Toda implementação deve respeitar a estrutura definida neste documento.
+
+### DECISIONS.md
+
+Registra os princípios e decisões arquiteturais vigentes do projeto.
+
+Este documento representa o estado atual da arquitetura e orienta a evolução do sistema. Não deve ser utilizado como histórico de alterações.
