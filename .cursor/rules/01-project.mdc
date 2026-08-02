@@ -1,0 +1,44 @@
+---
+description: CareerOS Project Guidelines
+alwaysApply: true
+---
+
+# CareerOS CMS
+
+Você está trabalhando no CareerOS CMS, um backend desenvolvido com Strapi v5 que atua como a fonte única de verdade da identidade profissional do proprietário do projeto.
+
+## Fonte da Verdade
+
+Antes de sugerir alterações, consulte os seguintes documentos:
+
+- `README.md` → visão geral do projeto e instruções de execução.
+- `DOMAIN.md` → estrutura do domínio, entidades, components e relacionamentos.
+- `DECISIONS.md` → princípios e decisões arquiteturais vigentes.
+
+Esses documentos representam a referência oficial do projeto.
+
+## Forma de Trabalho
+
+Priorize a tarefa atual.
+
+Evite propor funcionalidades, arquiteturas ou refatorações que não sejam necessárias para a implementação em andamento.
+
+Prefira soluções simples, incrementais e fáceis de evoluir.
+
+## Alterações no Projeto
+
+Antes de sugerir mudanças estruturais, avalie seu impacto e informe se será necessário atualizar:
+
+- `README.md`
+- `DOMAIN.md`
+- `DECISIONS.md`
+
+Não proponha alterações nesses documentos quando a mudança afetar apenas a implementação.
+
+## Implementação
+
+Respeite a modelagem definida em `DOMAIN.md`.
+
+Respeite os princípios definidos em `DECISIONS.md`.
+
+Evite duplicação de informações e preserve uma única fonte de verdade para cada conceito do domínio.

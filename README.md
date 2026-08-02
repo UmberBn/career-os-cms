@@ -1,61 +1,65 @@
-# 🚀 Getting started with Strapi
+# CareerOS CMS
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+CareerOS CMS é uma plataforma pessoal construída com **Strapi v5**, **PostgreSQL** e **Node.js** para atuar como a fonte única de verdade da minha identidade profissional.
 
-### `develop`
+O projeto centraliza informações sobre minha carreira e disponibiliza esses dados através de uma API, permitindo que diferentes consumidores, como um **Custom GPT**, site pessoal e geradores de currículo, utilizem a mesma base de informações.
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
+## Tecnologias
 
+- Strapi v5
+- PostgreSQL
+- Node.js
+- Docker
+
+## Pré-requisitos
+
+- Node.js
+- Docker
+- Docker Compose
+
+## Executando o projeto
+
+Instale as dependências:
+
+```bash
+npm install
 ```
+
+Inicie o banco de dados:
+
+```bash
+docker compose up -d
+```
+
+Execute a aplicação:
+
+```bash
 npm run develop
-# or
-yarn develop
 ```
 
-### `start`
+O painel administrativo estará disponível em:
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
-
-```
-npm run start
-# or
-yarn start
+```text
+http://localhost:1337/admin
 ```
 
-### `build`
+## Documentação
 
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
+O projeto utiliza uma documentação simples para manter a implementação alinhada com o domínio e as decisões arquiteturais.
 
-```
-npm run build
-# or
-yarn build
-```
+### DOMAIN.md
 
-## ⚙️ Deployment
+Define a estrutura do domínio do sistema, incluindo:
 
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
+- Collections
+- Components
+- Relacionamentos
+- Convenções de modelagem
 
-```
-yarn strapi deploy
-```
+Toda implementação deve respeitar a estrutura definida neste documento.
 
-## 📚 Learn more
+### DECISIONS.md
 
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
+Registra os princípios e decisões arquiteturais vigentes do projeto.
 
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
-
----
-
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+Este documento representa o estado atual da arquitetura e orienta a evolução do sistema. Não deve ser utilizado como histórico de alterações.
