@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "companies",
+  "info": {
+    "singularName": "company",
+    "pluralName": "companies",
+    "displayName": "Company",
+    "description": "Organization"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "website": {
+      "type": "string"
+    },
+    "industry": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "referenceContacts": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.reference-contact"
+    },
+    "experiences": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::experience.experience",
+      "mappedBy": "company"
+    }
+  }
+}

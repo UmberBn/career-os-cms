@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_narratives",
+  "info": {
+    "displayName": "Narrative",
+    "icon": "book"
+  },
+  "attributes": {
+    "context": {
+      "type": "blocks"
+    },
+    "problem": {
+      "type": "blocks"
+    },
+    "solution": {
+      "type": "blocks"
+    },
+    "result": {
+      "type": "blocks"
+    }
+  }
+}

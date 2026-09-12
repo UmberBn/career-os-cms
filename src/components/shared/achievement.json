@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_achievements",
+  "info": {
+    "displayName": "Achievement",
+    "icon": "trophy"
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "impact": {
+      "type": "string"
+    },
+    "metrics": {
+      "type": "string"
+    }
+  }
+}
