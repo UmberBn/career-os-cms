@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_profile_languages",
+  "info": {
+    "displayName": "Language",
+    "icon": "globe"
+  },
+  "attributes": {
+    "language": {
+      "type": "string",
+      "required": true
+    },
+    "level": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_technologies",
+  "info": {
+    "displayName": "Technology",
+    "icon": "cog"
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "category": {
+      "type": "string"
+    }
+  }
+}

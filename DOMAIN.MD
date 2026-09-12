@@ -42,17 +42,17 @@ Representa minha identidade profissional.
 
 ### Campos
 
-| Campo        | Tipo                         |
-| ------------ | ---------------------------- |
-| name         | String                       |
-| headline     | String                       |
-| summary      | Rich Text                    |
-| location     | String                       |
-| languages    | JSON / Component (a definir) |
-| github       | String                       |
-| linkedin     | String                       |
-| website      | String                       |
-| availability | Enumeration                  |
+| Campo        | Tipo                              |
+| ------------ | --------------------------------- |
+| name         | String                            |
+| headline     | String                            |
+| summary      | Rich Text                         |
+| location     | String                            |
+| languages    | Language (Component, Repeatable)  |
+| github       | String                            |
+| linkedin     | String                            |
+| website      | String                            |
+| availability | Enumeration (`open`, `selective`, `unavailable`) |
 
 ---
 
@@ -145,6 +145,15 @@ A Narrative é composta pelos seguintes campos:
 ---
 
 # Components
+
+## Language
+
+| Campo    | Tipo   |
+| -------- | ------ |
+| language | String |
+| level    | String |
+
+---
 
 ## ReferenceContact
 

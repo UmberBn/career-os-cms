@@ -1,0 +1,45 @@
+{
+  "kind": "singleType",
+  "collectionName": "profiles",
+  "info": {
+    "singularName": "profile",
+    "pluralName": "profiles",
+    "displayName": "Profile",
+    "description": "Professional identity"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "headline": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "blocks"
+    },
+    "location": {
+      "type": "string"
+    },
+    "languages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "profile.language"
+    },
+    "github": {
+      "type": "string"
+    },
+    "linkedin": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    },
+    "availability": {
+      "type": "enumeration",
+      "enum": ["open", "selective", "unavailable"]
+    }
+  }
+}

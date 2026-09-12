@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project",
+    "description": "Work executed within an Experience"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "narrative": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.narrative",
+      "required": true
+    },
+    "technologies": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.technology"
+    },
+    "achievements": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.achievement"
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link"
+    },
+    "experience": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::experience.experience",
+      "inversedBy": "projects"
+    }
+  }
+}
