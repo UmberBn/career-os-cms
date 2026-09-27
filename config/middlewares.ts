@@ -9,6 +9,7 @@ const config: Core.Config.Middlewares = [
   'strapi::query',
   'strapi::body',
   'strapi::session',
+  'global::mcp-oauth-gateway',
   'strapi::favicon',
   'strapi::public',
 ];

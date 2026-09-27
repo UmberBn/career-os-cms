@@ -3,7 +3,7 @@
 **Project:** CareerOS CMS
 **Version:** 1.0
 **Status:** Active
-**Last Updated:** 2026-08-01
+**Last Updated:** 2026-09-27
 
 ---
 
@@ -142,3 +142,29 @@ Toda conquista pertence exclusivamente a um Project.
 O domínio deve permanecer pequeno.
 
 Sempre que possível, o modelo existente deve ser evoluído antes da criação de novas entidades.
+
+---
+
+## Consumo externo (Custom GPT)
+
+Consumidores externos leem a Content API nativa do Strapi com um **API Token Read-only**.
+
+A role Public permanece sem permissão de leitura.
+
+A resposta é uma **projeção** dos dados publicados (populate fixo nos controllers). Não existe cópia da trajetória no GPT, nem endpoint agregado criado só para o consumidor.
+
+Contatos de referência (`referenceContacts`) não entram na projeção da API de consumo.
+
+---
+
+## Consumo externo (MCP)
+
+O ChatGPT consome o MCP nativo do Strapi através de um facade OAuth 2.1 no mesmo processo.
+
+O facade emite access token e refresh token próprios. O Admin Token permanece somente no servidor e é injetado na chamada interna ao `/mcp` depois que o access token é validado.
+
+O conector usa authorization code com PKCE S256, Client ID Metadata Document e `private_key_jwt`. O recurso canônico é `${CAREEROS_PUBLIC_URL}/mcp`.
+
+O Cursor em `localhost` continua enviando o Admin Token direto ao `/mcp`. No host público, esse token não é aceito.
+
+A permissão de leitura continua sendo a do Admin Token (somente `explorer.read` nas collections do CareerOS, sem `referenceContacts`). A Content API e o domínio não mudam.
